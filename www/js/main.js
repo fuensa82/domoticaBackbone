@@ -28,12 +28,23 @@ window.Page2View = Backbone.View.extend({
     }
 });
 
+window.muestraToldoView = Backbone.View.extend({
+
+    template:_.template($('#pageToldo').html()),
+
+    render:function (eventName) {
+        $(this.el).html(this.template());
+        return this;
+    }
+});
+
 var AppRouter = Backbone.Router.extend({
 
     routes:{
         "":"home",
         "page1":"page1",
-        "page2":"page2"
+        "page2":"page2",
+        "pageToldo":"muestraToldo"
     },
 
     initialize:function () {
@@ -60,6 +71,10 @@ var AppRouter = Backbone.Router.extend({
         this.changePage(new Page2View());
     },
 
+    muestraToldo:function () {
+        console.log('#muestraToldo');
+        this.changePage(new muestraToldoView());
+    },
     changePage:function (page) {
         $(page.el).attr('data-role', 'page');
         page.render();
