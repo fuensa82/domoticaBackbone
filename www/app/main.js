@@ -28,15 +28,7 @@ window.Page2View = Backbone.View.extend({
     }
 });
 
-window.muestraToldoView = Backbone.View.extend({
 
-    template:_.template($('#pageToldo').html()),
-
-    render:function (eventName) {
-        $(this.el).html(this.template());
-        return this;
-    }
-});
 
 var AppRouter = Backbone.Router.extend({
 
