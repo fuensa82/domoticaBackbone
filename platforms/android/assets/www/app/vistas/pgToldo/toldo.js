@@ -1,21 +1,9 @@
 window.muestraToldoView = Backbone.View.extend({
-    template: function(){
-        var promesa=new $.Deferred();
-        require(["lib/text!app/vistas/pgToldo/tplToldo.tpl"], 
-            function(templa){
-                promesa.resolve(_.template(templa));
-            });
-        return promesa
-    },
+    template:_.template($('#tplToldo').html()),
 
     render:function (eventName) {
-        var promesa=new $.Deferred();
-        var obj=this.el;
-        this.template().done(function(templa){
-            $(obj).html(templa);
-            promesa.resolve(this);
-        });
-        return promesa
+        $(this.el).html(this.template());
+        return this;
     },
     acciones:function(){
         $("#btnPonToldo").click(function(){

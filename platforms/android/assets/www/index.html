@@ -9,18 +9,16 @@
     <script type="text/template" id="home">
 
         <div data-role="header">
-            <h1>Backbone.js + jQuery Mobile</h1>
+            <h1>Domotica VPS</h1>
         </div>
 
         <div data-role="content">
-            <h3>Application Template for using Backbone.js and jQuery Mobile.</h3>
-            <p>Backbone.js is used for code organization (Models, Views) and "routing".</p>
-            <p>jQuery Mobile is used for its mobile styles and widgets. The routing and navigation capabilities of jQuery Mobile are disbled to let Backbone.js handle these requirements.</p>
-            <p>This is the Home page. It was created dynamically using an underscore.js template.</p>
-            <p>Navigate to:</p>
+            <h3>Casa Palomo García-Verdugo</h3>
+            
             <ul data-role="listview"  data-inset="true">
-                <li><a href="#page1">Page 1</a></li>
-                <li><a href="#page2">Page 2</a></li>
+                <li><a href="#pageToldo">Toldo</a></li>
+                <li><a href="#page1">Regar</a></li>
+                <li><a href="#page2">Ver datos</a></li>
             </ul>
         </div>
 
@@ -29,7 +27,7 @@
     <script type="text/template" id="page1">
 
         <div data-role="header">
-            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
+            <a href="#" data-icon="back" class="back ui-btn-left">Volver</a>
             <h1>Page 1</h1>
         </div>
 
@@ -47,7 +45,7 @@
     <script type="text/template" id="page2">
 
         <div data-role="header">
-            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
+            <a href="#" data-icon="back" class="back ui-btn-left">Volver</a>
             <h1>Page 2</h1>
         </div>
 
@@ -61,16 +59,39 @@
         </div>
 
     </script>
+    <!-- Pagina de las funciones del toldo -->
+    <script type="text/template" id="tplToldo">
+
+        <div data-role="header">
+            <a href="#" data-icon="back" class="back ui-btn-left">Volver</a>
+            <h1>Toldo</h1>
+        </div>
+
+        <div data-role="content">
+            <p>Solo se puede volver a la principal</p>
+            <p>Navigate to:</p>
+            <input id="btnPonToldo" type="button" value="Poner toldo">
+            <input id="btnQuitarToldo" type="button" value="Quitar toldo">
+            <input id="btnPonerToldo" type="button" value="Parar toldo">
+        </div>
+    </script>
 
     <!-- The Scripts -->
     <script src="lib/jquery-1.7.1.min.js"></script>
-    <script src="js/jqm-config.js"></script>
+    <script src="app/jqm-config.js"></script>
     <script src="lib/jquery.mobile-1.0.1.min.js"></script>
     <script src="lib/underscore-min.js"></script>
     <script src="lib/backbone-min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="lib/require.js"></script>
+    <!--script src="lib/text.js"></script-->
+    
+    <script src="app/main.js"></script>
+    
+    <!-- Pagina toldo -->
+    <script src="app/vistas/pgToldo/toldo.js"></script>
+
 </head>
 
 <body></body>
-
+<div id="cuerpo"></div>
 </html>

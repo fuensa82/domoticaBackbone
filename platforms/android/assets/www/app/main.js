@@ -28,12 +28,15 @@ window.Page2View = Backbone.View.extend({
     }
 });
 
+
+
 var AppRouter = Backbone.Router.extend({
 
     routes:{
         "":"home",
         "page1":"page1",
-        "page2":"page2"
+        "page2":"page2",
+        "pageToldo":"muestraToldo"
     },
 
     initialize:function () {
@@ -60,10 +63,17 @@ var AppRouter = Backbone.Router.extend({
         this.changePage(new Page2View());
     },
 
+    muestraToldo:function () {
+        console.log('#muestraToldo');
+        this.changePage(new muestraToldoView());
+    },
     changePage:function (page) {
         $(page.el).attr('data-role', 'page');
         page.render();
         $('body').append($(page.el));
+        if(page.acciones!=null){
+            page.acciones();
+        }
         var transition = $.mobile.defaultPageTransition;
         // We don't want to slide the first page
         if (this.firstPage) {
