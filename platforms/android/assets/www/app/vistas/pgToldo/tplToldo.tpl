@@ -8,5 +8,5 @@
     <p>Navigate to:</p>
     <input id="btnPonToldo" type="button" value="Poner toldo">
     <input id="btnQuitarToldo" type="button" value="Quitar toldo">
-    <input id="btnPonerToldo" type="button" value="Parar toldo">
+    <input id="btnParaToldo" type="button" value="Parar toldo">
 </div>

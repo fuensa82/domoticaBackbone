@@ -19,17 +19,37 @@ window.muestraToldoView = Backbone.View.extend({
     },
     acciones:function(){
         $("#btnPonToldo").click(function(){
-            /*$.get("http://micasa82.ddns.net:4321",function(data, status){
-                alert("Data: " + data + "\nStatus: " + status);
-            })*/
             $.ajax({
                 type:"GET",
                 dataType:"JSON",
-                url:"http://micasa82.ddns.net:4321",
+                url:"http://micasa82.ddns.net:4321/ponToldo",
+                //url:"http://localhost:8080",
                 crossDomain:true
             }).done(function(data){
-                alert("Data: " + data);
+                alert(data.resp);
             });
-        })
+        });
+        $("#btnQuitarToldo").click(function(){
+            $.ajax({
+                type:"GET",
+                dataType:"JSON",
+                url:"http://micasa82.ddns.net:4321/quitaToldo",
+                //url:"http://localhost:8080",
+                crossDomain:true
+            }).done(function(data){
+                alert(data.resp);
+            });
+        });
+        $("#btnParaToldo").click(function(){
+            $.ajax({
+                type:"GET",
+                dataType:"JSON",
+                url:"http://micasa82.ddns.net:4321/paraToldo",
+                //url:"http://localhost:8080",
+                crossDomain:true
+            }).done(function(data){
+                alert(data.resp);
+            });
+        });
     }
 });
