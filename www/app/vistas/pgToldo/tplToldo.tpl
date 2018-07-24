@@ -4,8 +4,8 @@
 </div>
 
 <div data-role="content">
-    <p>Solo se puede volver a la principal</p>
-    <p>Navigate to:</p>
+    <p>Estado del toldo: <span id="estadoToldo"></span></p>
+    <p>Acción a realizar:</p>
     <input id="btnPonToldo" type="button" value="Poner toldo">
     <input id="btnQuitarToldo" type="button" value="Quitar toldo">
     <input id="btnParaToldo" type="button" value="Parar toldo">

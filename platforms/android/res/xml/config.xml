@@ -4,12 +4,12 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>HelloCordova</name>
+    <name>Domotica Casa</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Domotica de la casa
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="vpalomosilva@gmail.com">
+        Victor Palomo
     </author>
     <content src="indexDomo.html" />
     <access origin="*" />

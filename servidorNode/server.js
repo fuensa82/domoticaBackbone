@@ -12,5 +12,5 @@ app.use(express.static('../www'));
 
 app.get('*',function(req, res){
     console.log("Resto");
-    res.json({resp:"Orden no reconocida"});
+    res.json({resp:"off"});
 });

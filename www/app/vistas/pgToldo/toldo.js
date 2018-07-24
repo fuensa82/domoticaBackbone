@@ -17,7 +17,28 @@ window.muestraToldoView = Backbone.View.extend({
         });
         return promesa
     },
+    ponEstadoToldo:function(){
+        $.ajax({
+            type:"GET",
+            dataType:"JSON",
+            //url:"http://micasa82.ddns.net:4321/ponToldo",
+            url:"http://localhost:8080",
+            crossDomain:true
+        }).done(function(data){
+            if(data.resp=='on'){
+                $("#estadoToldo").html("on");
+                $("#estadoToldo").css("background-color","#58FA82");
+                $("#estadoToldo").css("color","white");
+            }else{
+                $("#estadoToldo").html("&nbsp;off&nbsp;");
+                $("#estadoToldo").css("background-color","#F5A9BC");
+                $("#estadoToldo").css("color","white");
+            }
+        });
+        
+    },
     acciones:function(){
+        this.ponEstadoToldo();
         $("#btnPonToldo").click(function(){
             $.ajax({
                 type:"GET",
