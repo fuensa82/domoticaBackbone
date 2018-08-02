@@ -21,8 +21,8 @@ window.muestraToldoView = Backbone.View.extend({
         $.ajax({
             type:"GET",
             dataType:"JSON",
-            //url:"http://micasa82.ddns.net:4321/estadoToldo",
-            url:"http://192.168.10.138:4321/estadoToldo",
+            url:"http://micasa82.ddns.net:4321/estadoToldo",
+            //url:"http://192.168.10.138:4321/estadoToldo",
             crossDomain:true
         }).done(function(data){
             $("#estadoToldo").html(data.resp);
@@ -46,8 +46,8 @@ window.muestraToldoView = Backbone.View.extend({
             $.ajax({
                 type:"GET",
                 dataType:"JSON",
-                //url:"http://micasa82.ddns.net:4321/ponToldo",
-                url:"http://192.168.10.138:4321/ponToldo",
+                url:"http://micasa82.ddns.net:4321/ponToldo",
+                //url:"http://192.168.10.138:4321/ponToldo",
                 crossDomain:true
             }).done(function(data){
                 aqui.ponEstadoToldo();
@@ -58,8 +58,8 @@ window.muestraToldoView = Backbone.View.extend({
             $.ajax({
                 type:"GET",
                 dataType:"JSON",
-                //url:"http://micasa82.ddns.net:4321/quitaToldo",
-                url:"http://192.168.10.138:4321/quitaToldo",
+                url:"http://micasa82.ddns.net:4321/quitaToldo",
+                //url:"http://192.168.10.138:4321/quitaToldo",
                 crossDomain:true
             }).done(function(data){
                 aqui.ponEstadoToldo();
@@ -70,8 +70,8 @@ window.muestraToldoView = Backbone.View.extend({
             $.ajax({
                 type:"GET",
                 dataType:"JSON",
-                //url:"http://micasa82.ddns.net:4321/paraToldo",
-                url:"http://192.168.10.138:4321/paraToldo",
+                url:"http://micasa82.ddns.net:4321/paraToldo",
+                //url:"http://192.168.10.138:4321/paraToldo",
                 crossDomain:true
             }).done(function(data){
                 aqui.ponEstadoToldo();
