@@ -4,6 +4,10 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="WifiWizard">
+        <param name="android-package" value="com.pylonproducts.wifiwizard.WifiWizard" />
+        <param name="onload" value="true" />
+    </feature>
     <name>Domotica Casa</name>
     <description>
         Domotica de la casa
@@ -11,7 +15,7 @@
     <author email="vpalomosilva@gmail.com">
         Victor Palomo
     </author>
-    <content src="indexDomo.html" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
