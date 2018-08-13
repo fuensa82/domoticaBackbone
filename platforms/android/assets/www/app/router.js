@@ -19,11 +19,14 @@ define([
         },
     
         initialize:function () {
-            // Handle back button throughout the application
             $('.back').live('click', function(event) {
                 window.history.back();
                 return false;
             });
+            $.mobile.ajaxEnabled = false;
+            $.mobile.linkBindingEnabled = false;
+            $.mobile.hashListeningEnabled = false;
+            $.mobile.pushStateEnabled = false;
             this.firstPage = true;
         },
     

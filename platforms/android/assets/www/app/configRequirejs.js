@@ -12,15 +12,14 @@ require.config({
 require([
     'router','jquery'
     ], function (Router,$) {
-        //$(document).bind("mobileinit", function () {
-            // Remove page from DOM when it's being replaced
-            $('div[data-role="page"]').live('pagehide', function (event, ui) {
-                console.log("borrando ... ");
-                $(event.currentTarget).remove();
-            });
-        //});
+        //$.mobile=mobile;
+        $('div[data-role="page"]').live('pagehide', function (event, ui) {
+            console.log("borrando pagina ... ");
+            $(event.currentTarget).remove();
+        });
+        
         console.log("Entrando");
         window.app = new Router();
-        Backbone.history.start(); 
+        Backbone.history.start();
     }
 );

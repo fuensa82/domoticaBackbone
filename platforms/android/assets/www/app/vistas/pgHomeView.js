@@ -23,6 +23,10 @@ define([
                 Backbone.history.navigate("pageToldo", true);
                 return false;
             });
+            /*$.mobile.ajaxEnabled = false;
+            $.mobile.linkBindingEnabled = false;
+            $.mobile.hashListeningEnabled = false;
+            $.mobile.pushStateEnabled = false;*/
         }
     });
     return muestraToldoView;
