@@ -56,7 +56,7 @@ define([
         },
         changePage2:function (page) {
             //borramos la paginas para volver a crearlas y asi volver a programar las acciones.
-            $(".ui-page").not(".ui-page-active").remove();
+            //$(".ui-page").not(".ui-page-active").remove();
             $(page.el).attr('data-role','page');
             page.render().done(function(){
                 $('body').append($(page.el));

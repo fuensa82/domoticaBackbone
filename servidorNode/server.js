@@ -9,9 +9,3 @@ console.log("Ejecutando");
 var app = express();
 app.listen(8080);
 app.use(express.static('../www'));
-/*
-app.get('*',function(req, res){
-    console.log("Resto");
-    res.json({resp:"off"});
-});
-*/

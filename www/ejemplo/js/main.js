@@ -28,15 +28,12 @@ window.Page2View = Backbone.View.extend({
     }
 });
 
-
-
 var AppRouter = Backbone.Router.extend({
 
     routes:{
         "":"home",
         "page1":"page1",
-        "page2":"page2",
-        "pageToldo":"muestraToldo"
+        "page2":"page2"
     },
 
     initialize:function () {
@@ -63,40 +60,17 @@ var AppRouter = Backbone.Router.extend({
         this.changePage(new Page2View());
     },
 
-    muestraToldo:function () {
-        console.log('#muestraToldo');
-        this.changePage2(new muestraToldoView());
-    },
     changePage:function (page) {
         $(page.el).attr('data-role', 'page');
         page.render();
         $('body').append($(page.el));
-        if(page.acciones!=null){
-            page.acciones();
-        }
         var transition = $.mobile.defaultPageTransition;
         // We don't want to slide the first page
         if (this.firstPage) {
             transition = 'none';
             this.firstPage = false;
         }
-        $.mobile.changePage($(page.el), {changeHash:false, transition: transition});
-    },
-    changePage2:function (page) {
-        $(page.el).attr('data-role', 'page');
-        page.render().done(function(){
-            $('body').append($(page.el));
-            if(page.acciones!=null){
-                page.acciones();
-            }
-            var transition = $.mobile.defaultPageTransition;
-            // We don't want to slide the first page
-            if (this.firstPage) {
-                transition = 'none';
-                this.firstPage = false;
-            }
-            $.mobile.changePage($(page.el), {changeHash:false, transition: transition});
-        });
+        $.mobile.changePage($(page.el), {changeHash:true, transition: transition});
         
     }
 

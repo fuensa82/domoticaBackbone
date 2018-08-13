@@ -75,10 +75,6 @@ define([
                     alert(data.resp);
                 });
             });
-            $("#btnBackToldo").click(function(){
-                Backbone.history.navigate("home", { trigger: true });
-                return false;
-            });
             $("#btnVerEstadoToldo").click(function(){
                 Backbone.history.navigate("verEstadoToldo", { trigger: true });
                 return false;

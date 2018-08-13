@@ -4,6 +4,6 @@
         <h1>Ver Estado Toldo</h1>
     </div>
     <div data-role="content">
-        <p>Estado del toldo: <span id="estadoToldo"></span></p>    
+        <p>Estado del toldo: <span id="estadoToldo2"></span></p>    
     </div>
 </div>
