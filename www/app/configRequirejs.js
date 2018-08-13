@@ -3,7 +3,7 @@ require.config({
         jquery: '../lib/jquery-1.7.1',
         underscore: '../lib/underscore',
         backbone: '../lib/backbone',
-        jquerymobile:'../lib/jquery.mobile-1.0.1.min',
+        jquerymobile:'../lib/jquery.mobile-1.4.5',
         confMobile: 'jqm-config',
         text:'../lib/text',
         router:'router'
