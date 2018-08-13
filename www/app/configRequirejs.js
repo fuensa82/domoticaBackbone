@@ -12,12 +12,14 @@ require.config({
 require([
     'router','jquery'
     ], function (Router,$) {
+        //$.mobile=mobile;
         $('div[data-role="page"]').live('pagehide', function (event, ui) {
-            console.log("borrando ... ");
+            console.log("borrando pagina ... ");
             $(event.currentTarget).remove();
         });
+        
         console.log("Entrando");
         window.app = new Router();
-        Backbone.history.start(); 
+        Backbone.history.start();
     }
 );

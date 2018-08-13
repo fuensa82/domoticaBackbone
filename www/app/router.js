@@ -23,6 +23,10 @@ define([
                 window.history.back();
                 return false;
             });
+            $.mobile.ajaxEnabled = false;
+            $.mobile.linkBindingEnabled = false;
+            $.mobile.hashListeningEnabled = false;
+            $.mobile.pushStateEnabled = false;
             this.firstPage = true;
         },
     
