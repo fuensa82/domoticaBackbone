@@ -21,6 +21,7 @@ define([
         },            
         acciones:function(){
             this.ponEstadoToldo();
+            this.nombreWiFi();
             /*$("#btnBackVerEstadoToldo").click(function(){
                 //alert("Volviendo");
                 Backbone.history.navigate("pageToldo", { trigger: true });
@@ -29,12 +30,7 @@ define([
         },
         ponEstadoToldo:function(){
             var idSpan="#estadoToldo2";
-            $.ajax({
-                type:"GET",
-                dataType:"JSON",
-                url:Utils.url+"/estadoToldo",
-                crossDomain:true
-            }).done(function(data){
+            Utils.ajax("estadoToldo").done(function(data){
                 $(idSpan).html(data.resp);
                 if(data.resp=='on'){
                     $(idSpan).css("background-color","#58FA82");
@@ -48,6 +44,12 @@ define([
                 }
             });
             
+        },
+        nombreWiFi:function(){
+            var wifi=window.cordova.plugins.WifiManager;
+            wifi.getConnectionInfo(function(err,wifiinfo){
+                $("#WifiName").html(wifiinfo.SSID);
+            });
         }
     });
     return verEstadoToldoView;

@@ -12,7 +12,7 @@ require.config({
 require([
     'router','jquery'
     ], function (Router,$) {
-        //$.mobile=mobile;
+        
         $('div[data-role="page"]').live('pagehide', function (event, ui) {
             console.log("borrando pagina ... ");
             $(event.currentTarget).remove();

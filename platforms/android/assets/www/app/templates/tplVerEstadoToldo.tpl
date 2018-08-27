@@ -5,5 +5,6 @@
     </div>
     <div data-role="content">
         <p>Estado del toldo: <span id="estadoToldo2"></span></p>    
+        <p>WiFi conectada: <span id="WifiName"></span></p>    
     </div>
 </div>

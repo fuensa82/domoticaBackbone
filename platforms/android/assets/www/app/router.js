@@ -5,10 +5,12 @@ define([
     'jquerymobile',
     'vistas/pgHomeView',
     'vistas/pgToldoView',
-    'vistas/pgVerEstadoToldoView'
-	], function ($, _, Backbone, mobile, pgHomeView,pgToldoView,pgVerEstadoToldoView) {
+    'vistas/pgVerEstadoToldoView',
+    'utils/utils'
+	], function ($, _, Backbone, mobile, pgHomeView,pgToldoView,pgVerEstadoToldoView, Utils) {
     // rutas de la aplicación
     var AppRouter = Backbone.Router.extend({
+        back:false,
         routes:{
             "":"home",
             "home":"home",
@@ -21,6 +23,7 @@ define([
         initialize:function () {
             $('.back').live('click', function(event) {
                 window.history.back();
+                this.back=true;
                 return false;
             });
             $.mobile.ajaxEnabled = false;
@@ -28,6 +31,7 @@ define([
             $.mobile.hashListeningEnabled = false;
             $.mobile.pushStateEnabled = false;
             this.firstPage = true;
+            Utils.initialize();
         },
     
         home:function () {
@@ -58,8 +62,6 @@ define([
             $.mobile.changePage($(page.el), {changeHash:false, transition: transition});
         },
         changePage2:function (page) {
-            //borramos la paginas para volver a crearlas y asi volver a programar las acciones.
-            //$(".ui-page").not(".ui-page-active").remove();
             $(page.el).attr('data-role','page');
             page.render().done(function(){
                 $('body').append($(page.el));
@@ -67,6 +69,7 @@ define([
                     page.acciones();
                 }
                 var transition = $.mobile.defaultPageTransition;
+                transition="slide";
                 // We don't want to slide the first page
                 if (this.firstPage) {
                     transition = 'none';

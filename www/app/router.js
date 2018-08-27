@@ -5,8 +5,9 @@ define([
     'jquerymobile',
     'vistas/pgHomeView',
     'vistas/pgToldoView',
-    'vistas/pgVerEstadoToldoView'
-	], function ($, _, Backbone, mobile, pgHomeView,pgToldoView,pgVerEstadoToldoView) {
+    'vistas/pgVerEstadoToldoView',
+    'utils/utils'
+	], function ($, _, Backbone, mobile, pgHomeView,pgToldoView,pgVerEstadoToldoView, Utils) {
     // rutas de la aplicación
     var AppRouter = Backbone.Router.extend({
         back:false,
@@ -30,6 +31,7 @@ define([
             $.mobile.hashListeningEnabled = false;
             $.mobile.pushStateEnabled = false;
             this.firstPage = true;
+            Utils.initialize();
         },
     
         home:function () {
