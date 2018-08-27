@@ -22,6 +22,7 @@ define([
         acciones:function(){
             this.ponEstadoToldo();
             this.nombreWiFi();
+            this.getUltimoEstado();
             /*$("#btnBackVerEstadoToldo").click(function(){
                 //alert("Volviendo");
                 Backbone.history.navigate("pageToldo", { trigger: true });
