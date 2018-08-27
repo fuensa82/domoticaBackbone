@@ -50,6 +50,12 @@ define([
             wifi.getConnectionInfo(function(err,wifiinfo){
                 $("#WifiName").html(wifiinfo.SSID);
             });
+        },
+        getUltimoEstado:function(){
+            var idSpan=ultimoEstado;
+            Utils.ajax("hora").done(function(data){
+                $(idSpan).html(data.resp);
+            });
         }
     });
     return verEstadoToldoView;
