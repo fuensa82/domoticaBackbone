@@ -20,6 +20,9 @@ define([
         },
         cargarUrlCorrecta:function(){
             var aqui=this;
+            aqui.url=aqui.urlWan;
+        },
+            /*var aqui=this;
             var wifi=window.cordova.plugins.WifiManager;
             wifi.getConnectionInfo(function(err,wifiinfo){
                 //alert(wifiinfo.SSID);
@@ -29,7 +32,7 @@ define([
                     aqui.url=aqui.urlWan;
                 }
             });
-        },
+        },*/
         ajax:function(accion){
             var prom=$.ajax({
                 type:"GET",
