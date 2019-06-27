@@ -42,7 +42,7 @@ define([
             console.log('#pageToldo');
             this.changePage2(new pgToldoView());
         },
-        fnPageToldo:function(){
+        fnPageRegar:function(){
             this.changePage2(new pgRiegoView());
         },
         fnVerEstadoToldo: function(){

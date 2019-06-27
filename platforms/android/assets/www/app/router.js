@@ -14,7 +14,7 @@ define([
         routes:{
             "":"home",
             "home":"home",
-            "page1":"page1",
+            "pageRegar":"fnPageRegar",
             "page2":"page2",
             "pageToldo":"fnPageToldo",
             "verEstadoToldo":"fnVerEstadoToldo"
@@ -41,6 +41,9 @@ define([
         fnPageToldo:function () {
             console.log('#pageToldo');
             this.changePage2(new pgToldoView());
+        },
+        fnPageRegar:function(){
+            this.changePage2(new pgRiegoView());
         },
         fnVerEstadoToldo: function(){
             this.changePage2(new pgVerEstadoToldoView());
