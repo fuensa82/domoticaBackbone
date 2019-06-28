@@ -18,66 +18,45 @@ define([
             });
             return promesa
         },
-        ponEstadoToldo:function(){
+        ponEstadoRiego:function(){
             $.ajax({
                 type:"GET",
                 dataType:"JSON",
-                url:Utils.url+"/estadoToldo",
+                url:Utils.url+"/estado",
                 crossDomain:true
             }).done(function(data){
-                $("#estadoToldo").html(data.resp);
-                if(data.resp=='on'){
-                    $("#estadoToldo").css("background-color","#58FA82");
-                    $("#estadoToldo").css("color","white");
-                }else if(data.resp=='half'){
-                    $("#estadoToldo").css("background-color","#FAAC58");
-                    $("#estadoToldo").css("color","white");
+                $("#estadoRiego").html(data.resp);
+                if(data.resp2=='on'){
+                    $("#estadoRiego").css("background-color","#58FA82");
+                    $("#estadoRiego").css("color","white");
                 }else{
-                    $("#estadoToldo").css("background-color","#F5A9BC");
-                    $("#estadoToldo").css("color","white");
+                    $("#estadoRiego").css("background-color","#F5A9BC");
+                    $("#estadoRiego").css("color","white");
                 }
             });
             
         },
         acciones:function(){
             var aqui=this;
-            aqui.ponEstadoToldo();
-            $("#btnPonToldo").click(function(){
+            $("#btnRegar").click(function(){
                 $.ajax({
                     type:"GET",
                     dataType:"JSON",
-                    url:Utils.url+"/ponToldo",
+                    url:Utils.url+"/riega",
                     crossDomain:true
                 }).done(function(data){
-                    aqui.ponEstadoToldo();
                     alert(data.resp);
                 });
             });
-            $("#btnQuitarToldo").click(function(){
+            $("#btnPararRiego").click(function(){
                 $.ajax({
                     type:"GET",
                     dataType:"JSON",
-                    url:Utils.url+"/quitaToldo",
+                    url:Utils.url+"/paraRiego",
                     crossDomain:true
                 }).done(function(data){
-                    aqui.ponEstadoToldo();
                     alert(data.resp);
                 });
-            });
-            $("#btnParaToldo").click(function(){
-                $.ajax({
-                    type:"GET",
-                    dataType:"JSON",
-                    url:Utils.url+"/paraToldo",
-                    crossDomain:true
-                }).done(function(data){
-                    aqui.ponEstadoToldo();
-                    alert(data.resp);
-                });
-            });
-            $("#btnVerEstadoToldo").click(function(){
-                Backbone.history.navigate("verEstadoToldo", { trigger: true });
-                return false;
             });
         }
     });

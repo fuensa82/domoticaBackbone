@@ -8,7 +8,7 @@
         
         <ul data-role="listview"  data-inset="true">
             <li><a href="#pageToldo" id="btnPageToldo">Toldo</a></li>
-            <li><a href="#pageRegar">Regar</a></li>
+            <li><a href="#pageRegar" id="btnPageRegar">Regar</a></li>
             <li><a href="#page2">Ver datos</a></li>
         </ul>
     </div>

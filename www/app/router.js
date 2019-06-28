@@ -6,8 +6,10 @@ define([
     'vistas/pgHomeView',
     'vistas/pgToldoView',
     'vistas/pgVerEstadoToldoView',
+    'vistas/pgRiegoView',
     'utils/utils'
-	], function ($, _, Backbone, mobile, pgHomeView,pgToldoView,pgVerEstadoToldoView, Utils) {
+    ], function ($, _, Backbone, mobile, pgHomeView,pgToldoView,pgVerEstadoToldoView, 
+        pgRiegoView, Utils) {
     // rutas de la aplicación
     var AppRouter = Backbone.Router.extend({
         back:false,

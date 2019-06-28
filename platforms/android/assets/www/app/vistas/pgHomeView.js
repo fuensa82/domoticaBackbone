@@ -23,6 +23,11 @@ define([
                 Backbone.history.navigate("pageToldo", true);
                 return false;
             });
+            $("#btnPageRegar").click(function(){
+                alert("A regar 1");
+                Backbone.history.navigate("pageRegar", true);
+                return false;
+            });
             /*$.mobile.ajaxEnabled = false;
             $.mobile.linkBindingEnabled = false;
             $.mobile.hashListeningEnabled = false;
