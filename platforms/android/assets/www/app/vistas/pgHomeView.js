@@ -24,7 +24,6 @@ define([
                 return false;
             });
             $("#btnPageRegar").click(function(){
-                alert("A regar 1");
                 Backbone.history.navigate("pageRegar", true);
                 return false;
             });

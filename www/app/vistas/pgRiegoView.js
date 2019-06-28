@@ -38,6 +38,7 @@ define([
         },
         acciones:function(){
             var aqui=this;
+            aqui.ponEstadoRiego();
             $("#btnRegar").click(function(){
                 $.ajax({
                     type:"GET",
