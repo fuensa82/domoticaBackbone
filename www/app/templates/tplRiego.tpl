@@ -5,6 +5,8 @@
     </div>
     <div data-role="content">
         <p>Estado del riego: <span id="estadoRiego"></span></p>
+        <p>Riego completo: <span id="horaRiegoCompleto"></span></p>
+        <p>Riego parcial:  <span id="horaRiego"></span></p>
         <p>Acción a realizar:</p>
         <input id="btnRegar" type="button" value="Regar">
         <input id="btnPararRiego" type="button" value="Para riego">

@@ -25,7 +25,7 @@ define([
                 url:Utils.url+"/estado",
                 crossDomain:true
             }).done(function(data){
-                $("#estadoRiego").html(data.resp);
+                $("#estadoRiego").html(data.resp2);
                 if(data.resp2=='on'){
                     $("#estadoRiego").css("background-color","#58FA82");
                     $("#estadoRiego").css("color","white");
@@ -33,6 +33,18 @@ define([
                     $("#estadoRiego").css("background-color","#F5A9BC");
                     $("#estadoRiego").css("color","white");
                 }
+            });
+            this.ponHorasRiego();
+        },
+        ponHorasRiego:function(){
+            $.ajax({
+                type:"GET",
+                dataType:"JSON",
+                url:Utils.url+"/horasRiego",
+                crossDomain:true
+            }).done(function(data){
+                $("#horaRiegoCompleto").html(data.ultimaHoraRiegoCompleto);
+                $("#horaRiego").html(data.ultimaHoraRiego);
             });
             
         },
@@ -47,6 +59,7 @@ define([
                     crossDomain:true
                 }).done(function(data){
                     alert(data.resp);
+                    aqui.ponEstadoRiego();
                 });
             });
             $("#btnPararRiego").click(function(){
@@ -57,6 +70,7 @@ define([
                     crossDomain:true
                 }).done(function(data){
                     alert(data.resp);
+                    aqui.ponEstadoRiego();
                 });
             });
         }
