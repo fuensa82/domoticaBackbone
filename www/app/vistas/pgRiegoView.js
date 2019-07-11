@@ -34,7 +34,7 @@ define([
                     $("#estadoRiego").css("color","white");
                 }
             });
-            this.ponHorasRiego();
+            
         },
         ponHorasRiego:function(){
             $.ajax({
@@ -48,9 +48,22 @@ define([
             });
             
         },
+        ponHumedad:function(){
+            $.ajax({
+                type:"GET",
+                dataType:"JSON",
+                url:Utils.url+"/humedad",
+                crossDomain:true
+            }).done(function(data){
+                $("#humedad").html(data.humedad);
+            });
+            
+        },
         acciones:function(){
             var aqui=this;
-            aqui.ponEstadoRiego();
+            this.ponEstadoRiego();
+            this.ponHorasRiego();
+            this.ponHumedad();
             $("#btnRegar").click(function(){
                 $.ajax({
                     type:"GET",
