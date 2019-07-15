@@ -10,16 +10,9 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
-    "wifiwizard2": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
-    },
-    "cordova-plugin-android-wifi-manager": {
+    "com.pylonproducts.wifiwizard": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
     }
   },
-  "dependent_plugins": {
-    "es6-promise-plugin": {
-      "PACKAGE_NAME": "io.cordova.hellocordova"
-    }
-  }
+  "dependent_plugins": {}
 }

@@ -4,12 +4,8 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="WifiWizard2">
-        <param name="android-package" value="wifiwizard2.WifiWizard2" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="WifiManagerPlugin">
-        <param name="android-package" value="dk.kapetanovic.wifimanager.WifiManagerPlugin" />
+    <feature name="WifiWizard">
+        <param name="android-package" value="com.pylonproducts.wifiwizard.WifiWizard" />
         <param name="onload" value="true" />
     </feature>
     <name>Domotica Casa</name>
@@ -30,5 +26,4 @@
     <icon src="res/icon/domoticaIco.png" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="android-minSdkVersion" value="23" />
 </widget>

@@ -10,15 +10,7 @@
   "com.pylonproducts.wifiwizard": {
     "source": {
       "type": "registry",
-      "id": "wifiwizard@^0.2.11"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "wifiwizard2": {
-    "source": {
-      "type": "registry",
-      "id": "wifiwizard2@3.0.0"
+      "id": "wifiwizard"
     },
     "is_top_level": true,
     "variables": {}
@@ -31,12 +23,12 @@
     "is_top_level": false,
     "variables": {}
   },
-  "cordova-plugin-android-wifi-manager": {
+  "cordova-plugin-add-swift-support": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-android-wifi-manager"
+      "id": "cordova-plugin-add-swift-support@1.7.1"
     },
-    "is_top_level": true,
+    "is_top_level": false,
     "variables": {}
   }
 }
