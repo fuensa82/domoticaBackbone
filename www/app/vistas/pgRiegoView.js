@@ -66,7 +66,7 @@ define([
             this.ponHumedad();
             $("#btnRegar").click(function(){
                 $.ajax({
-                    type:"GET", 
+                    type:"GET",
                     dataType:"JSON",
                     url:Utils.url+"/riega",
                     crossDomain:true

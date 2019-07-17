@@ -20,9 +20,8 @@ define([
         },
         cargarUrlCorrecta:function(){
             var aqui=this;
-            var wifi=window.cordova.plugins.WifiManager;
-            wifi.getConnectionInfo(function(err,wifiinfo){
-                if(wifiinfo.SSID=="Casa1"){
+            window.WifiWizard2.getConnectedSSID().then(function(SSID){
+                if(SSID=="Casa1"){
                     aqui.url=aqui.urlLocal;
                 }else{
                     aqui.url=aqui.urlWan;

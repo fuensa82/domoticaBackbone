@@ -47,18 +47,9 @@ define([
             
         },
         nombreWiFi:function(){
-            //alert("nombreWiFi");
-            var wifi=window.cordova.plugins.WifiManager;
-            //alert("nombreWiFi 2");
-            wifi.getConnectionInfo(function(err,wifiinfo){
-                //alert("nombreWiFi 3");
-                $("#WifiName").html(wifiinfo.SSID);
-                //alert("nombreWiFi 4");
+            window.WifiWizard2.getConnectedSSID().then(function(SSID){
+                $("#WifiName").html(SSID);
             });
-            //alert("nombreWiFi 5");
-            window.getConnectedSSID().then(function(a){
-                alert(a);
-            })
         },
         getUltimoEstado:function(){
             var idSpan=ultimoEstado;
