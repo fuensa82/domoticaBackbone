@@ -22,7 +22,6 @@ define([
             var aqui=this;
             var wifi=window.cordova.plugins.WifiManager;
             wifi.getConnectionInfo(function(err,wifiinfo){
-                //alert(wifiinfo.SSID);
                 if(wifiinfo.SSID=="Casa1"){
                     aqui.url=aqui.urlLocal;
                 }else{
