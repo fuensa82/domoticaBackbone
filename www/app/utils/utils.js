@@ -26,7 +26,7 @@ define([
                 }else{
                     aqui.url=aqui.urlWan;
                 }
-                alert("URL: "+aqui.url);
+                console.log("URL: "+aqui.url);
             });
         },
         ajax:function(accion){

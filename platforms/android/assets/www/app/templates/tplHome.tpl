@@ -12,4 +12,7 @@
             <li><a href="#page2">Ver datos</a></li>
         </ul>
     </div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+        <span id="spanURL"></span>
+    </div>
 </div>

@@ -27,6 +27,7 @@ define([
                 Backbone.history.navigate("pageRegar", true);
                 return false;
             });
+            $("#spanURL").html(Utils.url);
             /*$.mobile.ajaxEnabled = false;
             $.mobile.linkBindingEnabled = false;
             $.mobile.hashListeningEnabled = false;
