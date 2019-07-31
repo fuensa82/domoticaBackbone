@@ -20,6 +20,7 @@ define([
         },
         cargarUrlCorrecta:function(){
             var aqui=this;
+            aqui.url=aqui.urlWan;
             window.WifiWizard2.getConnectedSSID().then(function(SSID){
                 if(SSID=="Casa1"){
                     aqui.url=aqui.urlLocal;
